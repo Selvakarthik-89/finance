@@ -1,0 +1,489 @@
+@import "tailwindcss";
+
+/* ========================================
+   Cormorant Garamond
+======================================== */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("./assets/fonts/CormorantGaramond-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+/* ========================================
+   Montserrat
+======================================== */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* ========================================
+   Global Typography
+======================================== */
+
+:root {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+
+:root {
+  color-scheme: light;
+
+  --navy: #031833;
+  --navy-light: #0A2342;
+  --gold: #C9A15F;
+  --gold-light: #D6B779;
+  --heading: #18202C;
+  --body: #555B63;
+  --background: #F8F8FA;
+  --white: #FFFFFF;
+  --border: #E6E6E8;
+  --shadow-soft: 0 10px 30px rgba(3, 24, 51, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img,
+svg,
+video,
+canvas,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+main {
+  width: 100%;
+}
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* =========================================================
+   TABLES
+========================================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background-color: var(--gold);
+  color: var(--white);
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+/*
+ * Firefox
+ */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--navy) var(--background);
+}
+
+/*
+ * Chrome / Edge / Safari
+ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy-light);
+}
+
+/* =========================================================
+   AUTOFILL
+========================================================= */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--heading);
+
+  box-shadow:
+    0 0 0 1000px var(--white) inset;
+
+  transition:
+    background-color 9999s ease-in-out 0s;
+}
+
+/* =========================================================
+   PRIMARY THEME CLASSES
+========================================================= */
+
+.bg-primary {
+  background-color: var(--navy);
+}
+
+.bg-primary-light {
+  background-color: var(--navy-light);
+}
+
+.bg-secondary {
+  background-color: var(--gold);
+}
+
+.bg-secondary-light {
+  background-color: var(--gold-light);
+}
+
+.bg-page {
+  background-color: var(--background);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.text-primary {
+  color: var(--navy);
+}
+
+.text-primary-light {
+  color: var(--navy-light);
+}
+
+.text-secondary {
+  color: var(--gold);
+}
+
+.text-heading {
+  color: var(--heading);
+}
+
+.text-body {
+  color: var(--body);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+
+/* =========================================================
+   BUTTON THEME
+========================================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: var(--navy);
+  color: var(--white);
+
+  border-radius: var(--radius-md);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--navy-light);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: var(--gold);
+  color: var(--white);
+
+  border-radius: var(--radius-md);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--gold-light);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card-theme {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================================================
+   INPUT THEME
+========================================================= */
+
+.input-theme {
+  background-color: var(--white);
+  color: var(--heading);
+  border: 1px solid var(--border);
+}
+
+.input-theme:focus {
+  border-color: var(--gold);
+
+  box-shadow:
+    0 0 0 3px rgba(201, 161, 95, 0.15);
+}
+
+/* Continuous right-to-left carousel motion. Each track contains two copies
+   of its items, so resetting after half the track stays visually seamless. */
+.hero-marquee-track,
+.brand-marquee-track {
+  animation: marquee-left 32s linear infinite;
+  will-change: transform;
+}
+
+.brand-marquee-track {
+  animation-duration: 24s;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE CONTAINER
+========================================================= */
+
+.container-theme {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+/* Small devices */
+@media (min-width: 640px) {
+  .container-theme {
+    max-width: 640px;
+    padding-inline: 20px;
+  }
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+  .container-theme {
+    max-width: 768px;
+    padding-inline: 24px;
+  }
+}
+
+/* Large devices */
+@media (min-width: 1024px) {
+  .container-theme {
+    max-width: 1024px;
+    padding-inline: 32px;
+  }
+}
+
+/* Extra large devices */
+@media (min-width: 1280px) {
+  .container-theme {
+    max-width: 1280px;
+    padding-inline: 40px;
+  }
+}
+
+/* 2XL */
+@media (min-width: 1536px) {
+  .container-theme {
+    max-width: 1536px;
+    padding-inline: 48px;
+  }
+}
+
+/* =========================================================
+   MOBILE SAFETY
+========================================================= */
+
+@media (max-width: 639px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    line-height: 1.15;
+  }
+
+  h2 {
+    line-height: 1.2;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   DARK MODE SAFETY
+========================================================= */
+
+/*
+ * Keep the application's defined colors.
+ * Browser/OS dark-mode preference will not automatically
+ * change the website appearance.
+ */
+
+html {
+  color-scheme: light;
+}
