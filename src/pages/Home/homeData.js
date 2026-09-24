@@ -1,11 +1,58 @@
-import { BarChart3, FileText, HandCoins, PieChart, ShieldCheck, Target, Users, WalletCards } from "lucide-react";
+import {
+  BarChart3,
+  BriefcaseBusiness,
+  FileText,
+  HandCoins,
+  PieChart,
+  ShieldCheck,
+  Target,
+  Users,
+  WalletCards,
+} from "lucide-react";
 
 export const services = [
-  { title: "Investment Planning", description: "Grow your wealth with smart, data-driven investment strategies.", icon: PieChart, path: "/services/service-1" },
-  { title: "Retirement Planning", description: "Secure your future with custom retirement and income plans.", icon: ShieldCheck, path: "/services/service-2" },
-  { title: "Wealth Management", description: "Comprehensive portfolio management tailored to your goals.", icon: Target, path: "/services/service-3" },
-  { title: "Tax Planning", description: "Minimize taxes and maximize savings with strategic planning.", icon: FileText, path: "/services/service-4" },
-  { title: "Business Finance", description: "Empowering businesses with financial clarity and growth strategies.", icon: HandCoins, path: "/services" },
+  {
+    title: "GST Compliance",
+    description:
+      "Registration, amendments, returns, annual returns, reconciliations and regular GST compliance.",
+    icon: PieChart,
+    path: "/services/service-1",
+  },
+  {
+    title: "GST Notices & Assessments",
+    description:
+      "Professional assistance for scrutiny, show-cause notices, demand proceedings and departmental submissions.",
+    icon: ShieldCheck,
+    path: "/services/service-2",
+  },
+  {
+    title: "GST Appeals & Representation",
+    description:
+      "Preparation and filing assistance for GST appeals, rectification matters and representation before appropriate authorities.",
+    icon: Target,
+    path: "/services/service-3",
+  },
+  {
+    title: "GST Refunds",
+    description:
+      "Refund applications, supporting workings, documentation, deficiency responses and follow-up assistance.",
+    icon: FileText,
+    path: "/services/service-4",
+  },
+  {
+    title: "Income Tax",
+    description:
+      "Income-tax returns, computations, presumptive taxation, TDS and related tax compliance.",
+    icon: HandCoins,
+    path: "/services",
+  },
+  {
+    title: "Business Compliance",
+    description:
+      "PAN, TAN, Udyam, IEC/DGFT, trademark and other business registration/compliance assistance.",
+    icon: BriefcaseBusiness,
+    path: "/services",
+  },
 ];
 
 export const metrics = [

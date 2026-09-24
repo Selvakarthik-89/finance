@@ -5,7 +5,6 @@ import {
   Clock,
   Globe,
   BriefcaseBusiness,
-  Play,
   MessageCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -14,7 +13,6 @@ const quickLinks = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about-us" },
   { label: "Services", path: "/services" },
-  { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -27,19 +25,13 @@ const services = [
   { label: "Business Compliance", path: "/services#business-compliance" },
 ];
 
-const resources = [
-  { label: "Guides", path: "/resources/guides" },
-  { label: "FAQs", path: "/resources/faqs" },
-  { label: "Market Insights", path: "/resources/market-insights" },
-  { label: "Calculators", path: "/resources/calculators" },
-  { label: "Glossary", path: "/resources/glossary" },
-];
-
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-[var(--navy)] text-white">
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-10">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_0.8fr_1fr_1fr_1.4fr] lg:gap-8">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_0.8fr_1fr_1.4fr] lg:gap-8">
 
           {/* Company Information */}
           <div>
@@ -86,14 +78,6 @@ const Footer = () => {
               </a>
 
               <a
-                href="/blog"
-                aria-label="Video"
-                className="text-gray-300 transition hover:text-white"
-              >
-                <Play size={20} />
-              </a>
-
-              <a
                 href="/contact"
                 aria-label="Chat"
                 className="text-gray-300 transition hover:text-white"
@@ -131,26 +115,6 @@ const Footer = () => {
 
             <ul className="space-y-3">
               {services.map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className="text-sm text-gray-300 transition hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="mb-5 text-sm font-bold uppercase tracking-wide">
-              Resources
-            </h3>
-
-            <ul className="space-y-3">
-              {resources.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
@@ -228,6 +192,14 @@ const Footer = () => {
               </div>
 
             </div>
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/15 pt-5 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {currentYear} FinanceCo. All rights reserved.</p>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <span>** Terms &amp; Conditions</span>
+            <span>Privacy Policy</span>
           </div>
         </div>
       </div>

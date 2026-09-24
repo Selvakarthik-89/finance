@@ -9,16 +9,13 @@ import MobileNav from "./components/MobileNav";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
-  const [desktopResourcesOpen, setDesktopResourcesOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setMobileMenuOpen(false);
         setServicesOpen(false);
-        setResourcesOpen(false);
       }
     };
 
@@ -40,15 +37,12 @@ export default function Header() {
   const closeAllMenus = () => {
     setMobileMenuOpen(false);
     setServicesOpen(false);
-    setResourcesOpen(false);
     setDesktopServicesOpen(false);
-    setDesktopResourcesOpen(false);
   };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((previous) => !previous);
     setServicesOpen(false);
-    setResourcesOpen(false);
   };
 
   return (
@@ -61,16 +55,21 @@ export default function Header() {
             <DesktopNav
               desktopServicesOpen={desktopServicesOpen}
               setDesktopServicesOpen={setDesktopServicesOpen}
-              desktopResourcesOpen={desktopResourcesOpen}
-              setDesktopResourcesOpen={setDesktopResourcesOpen}
             />
 
             <Link
               to="/book-consultation"
               className="hidden shrink-0 items-center justify-center gap-2 rounded-md bg-[var(--navy)] px-4 py-2.5 text-xs font-semibold text-white transition-all duration-300 hover:bg-[var(--gold)] sm:px-5 sm:py-3 sm:text-sm lg:inline-flex xl:px-6 xl:py-3.5 2xl:px-7"
             >
-              <CalendarDays size={17} strokeWidth={1.8} />
-              <span className="whitespace-nowrap">Book a Consultation</span>
+              <CalendarDays
+                size={17}
+                strokeWidth={1.8}
+                className="text-white"
+              />
+
+              <span className="whitespace-nowrap text-white">
+                Book a Consultation
+              </span>
             </Link>
 
             <button
@@ -89,8 +88,6 @@ export default function Header() {
           mobileMenuOpen={mobileMenuOpen}
           servicesOpen={servicesOpen}
           setServicesOpen={setServicesOpen}
-          resourcesOpen={resourcesOpen}
-          setResourcesOpen={setResourcesOpen}
           closeAllMenus={closeAllMenus}
         />
       </header>

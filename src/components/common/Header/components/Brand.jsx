@@ -11,7 +11,7 @@ export default function Brand({ onClick }) {
         <span className="text-lg font-bold tracking-[0.08em] text-[var(--navy)] transition-colors duration-300 group-hover:text-[var(--gold)] min-[375px]:text-xl sm:text-2xl lg:text-[26px] xl:text-[28px]">
           LOGO
         </span>
-        <span className="mt-1 text-[6px] font-medium tracking-[0.20em] text-[var(--gold)] min-[375px]:text-[7px] sm:text-[8px] lg:text-[9px] xl:text-[10px]">
+        <span className="mt-1 text-xs font-medium tracking-[0.20em] text-[var(--gold)]">
           YOUR BRAND
         </span>
       </div>

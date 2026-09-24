@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
-import { resourceItems, serviceItems } from "../data/navigation";
+import { serviceItems } from "../data/navigation";
 
 const desktopLinkClass = ({ isActive }) => [
   "relative inline-flex items-center py-2 text-[13px] sm:text-sm xl:text-[15px] font-medium whitespace-nowrap transition-colors duration-300",
@@ -11,8 +11,6 @@ const desktopLinkClass = ({ isActive }) => [
 export default function DesktopNav({
   desktopServicesOpen,
   setDesktopServicesOpen,
-  desktopResourcesOpen,
-  setDesktopResourcesOpen,
 }) {
   return (
     <nav className="hidden lg:flex lg:items-center lg:justify-center lg:gap-5 xl:gap-7 2xl:gap-10">
@@ -70,49 +68,6 @@ export default function DesktopNav({
           </div>
         </div>
       </div>
-
-      <div
-        className="relative"
-        onMouseEnter={() => setDesktopResourcesOpen(true)}
-        onMouseLeave={() => setDesktopResourcesOpen(false)}
-      >
-        <button
-          type="button"
-          onClick={() => setDesktopResourcesOpen((previous) => !previous)}
-          className="inline-flex items-center gap-1 py-2 text-sm font-medium text-[var(--navy)] transition-colors duration-300 hover:text-[var(--gold)] xl:text-[15px]"
-          aria-expanded={desktopResourcesOpen}
-        >
-          <span>Resources</span>
-          <ChevronDown
-            size={16}
-            strokeWidth={1.8}
-            className={`transition-transform duration-300 ${desktopResourcesOpen ? "rotate-180" : "rotate-0"}`}
-          />
-        </button>
-
-        <div
-          className={`absolute left-1/2 top-full w-[230px] -translate-x-1/2 pt-3 transition-all duration-200 ${
-            desktopResourcesOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"
-          }`}
-        >
-          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-[0_15px_40px_rgba(0,0,0,0.10)] ring-1 ring-slate-100">
-            {resourceItems.map((resource) => (
-              <Link
-                key={resource.path}
-                to={resource.path}
-                onClick={() => setDesktopResourcesOpen(false)}
-                className="block rounded-lg px-4 py-3 text-sm font-medium text-[var(--navy)] transition-all duration-200 hover:bg-slate-50 hover:pl-5 hover:text-[var(--gold)] xl:text-[15px]"
-              >
-                {resource.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <NavLink to="/blog" className={desktopLinkClass}>
-        Blog
-      </NavLink>
 
       <NavLink to="/contact" className={desktopLinkClass}>
         Contact

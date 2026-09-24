@@ -106,7 +106,7 @@ export default function AboutSection() {
             RIGHT CONTENT
         ========================== */}
         <div className="w-full max-w-xl lg:max-w-none">
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--gold)]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold)]">
             About us
           </p>
 
@@ -154,30 +154,34 @@ export default function AboutSection() {
           </ul>
 
           {/* CTA */}
-          <Link
-            to="/about-us"
-            className="
-              mt-7
-              inline-flex
-              items-center
-              gap-3
-              rounded-sm
-              bg-[var(--navy)]
-              px-5
-              py-3
-              text-[10px]
-              font-bold
-              uppercase
-              tracking-[0.1em]
-              text-white
-              transition
-              hover:bg-[var(--gold)]
-              sm:mt-8
-            "
-          >
-            Learn more about us
-            <ArrowRight size={14} />
-          </Link>
+         <Link
+  to="/about-us"
+  className="
+    mt-7
+    inline-flex
+    items-center
+    gap-3
+    rounded-sm
+    bg-[var(--navy)]
+    px-5
+    py-3
+    text-xs
+    font-bold
+    uppercase
+    tracking-[0.1em]
+    !text-white
+    transition
+    hover:bg-[var(--gold)]
+    sm:mt-8
+  "
+>
+  <span className="!text-white">Learn more about us</span>
+
+  <ArrowRight
+    size={14}
+    className="!text-white"
+  />
+</Link>
         </div>
       </div>
 
@@ -207,7 +211,7 @@ export default function AboutSection() {
     A goal without a plan is just a wish.
   </p>
 
-  <p className="mt-4 text-[10px] text-slate-500">
+  <p className="mt-4 text-xs text-slate-500">
     — Antoine de Saint-Exupéry
   </p>
 </div>

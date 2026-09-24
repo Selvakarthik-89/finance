@@ -14,7 +14,7 @@ export default function TrustBar() {
   return (
     <section className="relative z-20 mx-auto -mt-7 max-w-[1280px] px-5 sm:-mt-10 sm:px-8 lg:px-10">
       <div className="rounded-2xl bg-white px-5 py-6 shadow-[0_12px_35px_rgba(3,24,51,0.08)] sm:px-10 sm:py-8">
-        <p className="text-center text-[9px] font-bold uppercase tracking-[0.22em] text-[var(--navy)] sm:text-[12px]">Trusted by individuals &amp; businesses</p>
+        <p className="text-center text-xs font-bold uppercase tracking-[0.22em] text-[var(--navy)]">Trusted by individuals &amp; businesses</p>
 
         <div className="mt-5 overflow-hidden" aria-label="Trusted brands">
           <div className="brand-marquee-track flex w-[900%] sm:w-[450%] lg:w-[300%]">

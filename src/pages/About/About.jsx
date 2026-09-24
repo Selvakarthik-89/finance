@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import ContactImage from "../../assets/contact-us.jpg";
 import ComplianceImage from "../../assets/images/Compliance.png";
 import FinanceImage from "../../assets/images/Finance1.png";
-import AboutImage from "../../assets/images/about_img.jpg";
 
 const approachSteps = [
   { title: "Understand", text: "We begin with the facts, context, and practical needs behind each matter.", icon: FolderSearch },
@@ -33,12 +32,12 @@ export default function About() {
             <img src={FinanceImage} alt="Professionals discussing financial records" className="relative z-10 aspect-[1.08] w-full rounded-xl object-cover shadow-lg" />
             <div className="absolute -bottom-8 right-0 z-20 rounded-xl border-4 border-white bg-[var(--navy)] px-5 py-4 text-white shadow-xl sm:right-[-18px] sm:px-7 sm:py-5">
               <p className="font-serif text-3xl text-[var(--gold-light)]">1976</p>
-              <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-300">Our beginning</p>
+              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">Our beginning</p>
             </div>
           </div>
 
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--gold)]">Our legacy</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold)]">Our legacy</p>
             <h2 className="mt-3 font-serif text-4xl leading-tight text-[var(--navy)] sm:text-5xl">A Professional Legacy Since 1976</h2>
             <p className="mt-6 text-sm leading-7 text-slate-600">Our firm traces its professional roots to 1976. Across the years, the practice has continued through generations, carrying forward a standard of careful work, dependable advice, and respect for every client&apos;s circumstances.</p>
             <p className="mt-4 text-sm leading-7 text-slate-600">That legacy belongs to the firm and the practice built over time. It should not be confused with the personal years of experience of any one individual practitioner. Today, our team continues that professional tradition with current knowledge, practical attention, and a clear focus on the work in front of each client.</p>
@@ -54,7 +53,7 @@ export default function About() {
       <section className="bg-[#f7f8fa] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-28">
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <div className="order-2 lg:order-1">
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--gold)]">Our approach</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold)]">Our approach</p>
             <h2 className="mt-3 font-serif text-4xl leading-tight text-[var(--navy)] sm:text-5xl">Compliance with Clarity</h2>
             <p className="mt-6 text-sm leading-7 text-slate-600">Our approach is centred on understanding the facts of each case, examining the applicable statutory provisions and records, preparing appropriate reconciliations and documentation, and assisting clients in addressing their tax and compliance requirements in a structured manner.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -70,8 +69,8 @@ export default function About() {
 
       <section className="px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
         <div className="mx-auto grid max-w-[1180px] items-center gap-10 rounded-2xl bg-[var(--navy)] px-7 py-10 text-white sm:px-12 sm:py-14 lg:grid-cols-[1fr_auto] lg:px-16">
-          <div><p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--gold-light)]">A dependable next step</p><h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">Let&apos;s bring clarity to your next compliance requirement.</h2><p className="mt-4 max-w-xl text-sm leading-6 text-slate-300">Share the details of your situation with our team and we&apos;ll help you understand the practical path forward.</p></div>
-          <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-sm bg-[var(--gold)] px-6 py-3.5 text-[10px] font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[var(--gold-light)]">Start a conversation <ArrowRight size={15} /></Link>
+          <div><p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-light)]">A dependable next step</p><h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">Let&apos;s bring clarity to your next compliance requirement.</h2><p className="mt-4 max-w-xl text-sm leading-6 text-slate-300">Share the details of your situation with our team and we&apos;ll help you understand the practical path forward.</p></div>
+          <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-sm bg-[var(--gold)] px-6 py-3.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[var(--gold-light)]">Start a conversation <ArrowRight size={15} /></Link>
         </div>
       </section>
     </main>

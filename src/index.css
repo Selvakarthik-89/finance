@@ -1,27 +1,4 @@
 @import "tailwindcss";
-
-/* ========================================
-   Cormorant Garamond
-======================================== */
-
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("./assets/fonts/CormorantGaramond-VariableFont_wght.ttf")
-    format("truetype");
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-style: italic;
-  font-weight: 300 700;
-  font-display: swap;
-}
-
 /* ========================================
    Montserrat
 ======================================== */
@@ -51,6 +28,9 @@
 :root {
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Montserrat", sans-serif;
+  --font-size-min: 14px;
+  --font-size-body: 16px;
+  --line-height-body: 1.6;
 }
 
 html,
@@ -98,10 +78,14 @@ body {
   min-height: 100vh;
   background: var(--background);
   color: var(--body);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+small {
+  font-size: var(--font-size-min);
 }
 
 #root {
@@ -372,12 +356,14 @@ select:-webkit-autofill {
 /* Continuous right-to-left carousel motion. Each track contains two copies
    of its items, so resetting after half the track stays visually seamless. */
 .hero-marquee-track,
-.brand-marquee-track {
+.brand-marquee-track,
+.services-marquee-track {
   animation: marquee-left 32s linear infinite;
   will-change: transform;
 }
 
-.brand-marquee-track {
+.brand-marquee-track,
+.services-marquee-track {
   animation-duration: 24s;
 }
 

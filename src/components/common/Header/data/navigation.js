@@ -25,26 +25,4 @@ export const serviceItems = [
   },
 ];
 
-export const resourceItems = [
-  {
-    label: "Guides",
-    path: "/resources/guides",
-  },
-  {
-    label: "FAQS",
-    path: "/resources/faqs",
-  },
-  {
-    label: "Market Insights",
-    path: "/resources/market-insights",
-  },
-  {
-    label: "Calculators",
-    path: "/resources/calculators",
-  },
-  {
-    label: "Glossary",
-    path: "/resources/glossary",
-  },
-];
 

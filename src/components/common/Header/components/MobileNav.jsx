@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { CalendarDays, ChevronDown } from "lucide-react";
 
-import { resourceItems, serviceItems } from "../data/navigation";
+import { serviceItems } from "../data/navigation";
 
 const mobileLinkClass = ({ isActive }) => [
   "flex w-full items-center py-4 text-sm sm:text-[15px] font-medium border-b border-slate-100 transition-colors duration-300",
@@ -12,8 +12,6 @@ export default function MobileNav({
   mobileMenuOpen,
   servicesOpen,
   setServicesOpen,
-  resourcesOpen,
-  setResourcesOpen,
   closeAllMenus,
 }) {
   return (
@@ -71,41 +69,6 @@ export default function MobileNav({
               </div>
             </div>
           </div>
-
-          <div className="border-b border-slate-100">
-            <button
-              type="button"
-              onClick={() => setResourcesOpen((previous) => !previous)}
-              className="flex w-full items-center justify-between py-4 text-left text-sm font-medium text-[var(--navy)] transition-colors duration-300 hover:text-[var(--gold)] sm:text-[15px]"
-              aria-expanded={resourcesOpen}
-            >
-              <span>Resources</span>
-              <ChevronDown
-                size={18}
-                strokeWidth={1.8}
-                className={`transition-transform duration-300 ${resourcesOpen ? "rotate-180" : "rotate-0"}`}
-              />
-            </button>
-
-            <div className={`overflow-hidden transition-all duration-300 ${resourcesOpen ? "max-h-[500px] pb-2" : "max-h-0"}`}>
-              <div className="rounded-lg bg-slate-50 p-2">
-                {resourceItems.map((resource) => (
-                  <Link
-                    key={resource.path}
-                    to={resource.path}
-                    onClick={closeAllMenus}
-                    className="block rounded-md px-4 py-3 text-sm font-medium text-[var(--navy)] transition-all duration-200 hover:bg-white hover:text-[var(--gold)] sm:text-[15px]"
-                  >
-                    {resource.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <NavLink to="/blog" onClick={closeAllMenus} className={mobileLinkClass}>
-            Blog
-          </NavLink>
 
           <NavLink to="/contact" onClick={closeAllMenus} className={mobileLinkClass}>
             Contact

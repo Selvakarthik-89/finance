@@ -278,7 +278,7 @@ export default function Contact() {
               {/* Submit */}
                 <button
                   type="submit"
-                  className="shrink-0 items-center justify-center gap-2 rounded-md bg-[var(--navy)] px-4 py-2.5 text-xs font-semibold text-[var(--gold-light)] sm:px-5 sm:py-3 sm:text-sm lg:inline-flex xl:px-6 xl:py-3.5 2xl:px-7">
+                  className="text-white hover:bg-[var(--gold)] shrink-0 items-center justify-center gap-2 rounded-md bg-[var(--navy)] px-4 py-2.5 text-xs font-semibold text-[var(--gold-light)] sm:px-5 sm:py-3 sm:text-sm lg:inline-flex xl:px-6 xl:py-3.5 2xl:px-7">
                   Send Enquiry
                   <Send size={15} />
                 </button>
